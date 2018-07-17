@@ -1,0 +1,14 @@
+## GRADLE FILES ##
+.gradle
+classes
+build
+out
+
+## IDEA FILES ##
+.idea
+
+## LOG FILES ##
+logs
+
+## TEST REPORTS
+test-reports
