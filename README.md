@@ -46,3 +46,9 @@ This project can be run locally with gradle. Use the following command:
 gradle clean build test -Dcucumber.options="--tags Regression"
 ```
 
+## Test Reports: ##
+#### Local ####
+Local test reports are found in the /{root}/test-reports/cucumber-features.html/index.html
+
+#### JenkinsPlugin ####
+The IDEAL test report would be available from the Jenkins Cucumber Report plugin. This would be found in the Jenkins console and integrated to slack, email, and the CI/CD pipeline for alerts.
