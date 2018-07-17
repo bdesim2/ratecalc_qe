@@ -22,7 +22,7 @@ import org.testng.annotations.*;
         plugin = {"pretty"},
         format = {"html:test-reports/cucumber-features.html", "json:test-reports/cucumber.json"},
         features = "src/test/resources",
-        glue = {"ratecalc.lib.framework", "ratecalc.lib.rest", "ratecalc.lib.applicationStepDefinitions"}
+        glue = {"com.ratecalc.lib.framework", "com.ratecalc.lib.rest", "com.ratecalc.lib.applicationStepDefinitions"}
 )
 public class BaseCucumberTest {
 
