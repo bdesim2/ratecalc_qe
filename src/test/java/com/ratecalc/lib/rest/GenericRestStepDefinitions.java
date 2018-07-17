@@ -74,6 +74,20 @@ public class GenericRestStepDefinitions extends BaseCucumberTest {
     // MEMORY STEP DEFINITIONS
     // ================================================================================================================
 
+    @Given("^I set the following attributes:$")
+    public void setAttributes(Map<String, String> map){
+        logger.debug("Setting some custom attributes in memory from the scenario");
+        for (Map.Entry<String, String> entry : map.entrySet()){
+            String key = commonLibrary.checkForVariables(entry.getKey());
+            String value = commonLibrary.checkForVariables(entry.getValue());
+            if (value.equalsIgnoreCase("random")){
+                value = commonLibrary.generateRandomString(36);
+            }
+            logger.debug("Saving value: " + value + " as: " + key);
+            memory.saveValue(key, value);
+        }
+    }
+
     @Given("^I save the generated (?:JSON|json) at \"(.*)\" as \"(.*)\"$")
     public void SaveGeneratedJSON(String key, String storageName) throws IOException {
         key = commonLibrary.checkForVariables(key);

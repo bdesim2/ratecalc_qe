@@ -13,7 +13,7 @@ Feature: Validate API GET /rates
     Then the response status should be "200"
 
   @HealthCheck
-  Scenario: Validate that a valid get all rates request returns the documented schema
+  Scenario: Validate that a valid get all rates request returns the documented schema, headers, data types, and data
     When I send a RATECALC GET request to "/rates"
     Then the response status should be "200"
     And the response headers should be JSON
