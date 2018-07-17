@@ -48,9 +48,9 @@ public class RestAssertStepDefinitions extends BaseCucumberTest {
     public void AssertJSONHeaders() {
         logger.debug("Asserting that the response Content-Type headers are application/json");
         assertThat(
-                "The expected Content-Type header was application/json;charset=UTF-8, but we found: " + memory.getLastResponse().contentType(),
+                "The expected Content-Type header was application/json, but we found: " + memory.getLastResponse().contentType(),
                 memory.getLastResponse().contentType(),
-                is("application/json;charset=UTF-8")
+                is("application/json")
         );
     }
 
