@@ -42,7 +42,7 @@ public class BaseCucumberTest {
         configManager = new ConfigManager();
 
         // Set the BASE URIs
-        configManager.setRATE_CALC_URI("http://localhost:8080");
+        configManager.setRATE_CALC_URI("http://localhost:8080/api");
 
     } // end Initialize
 

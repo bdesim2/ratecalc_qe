@@ -37,7 +37,7 @@ Configuration:
   Loggers:
 
     Root:
-      level: info
+      level: debug
       AppenderRef:
         - ref: Console_Appender
 
